@@ -18,6 +18,7 @@
 		B8C2294416B7840000F9FD6A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8C2294316B7840000F9FD6A /* Default-568h@2x.png */; };
 		B8C2294716B7840000F9FD6A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C2294516B7840000F9FD6A /* MainStoryboard.storyboard */; };
 		B8C2294A16B7840000F9FD6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C2294916B7840000F9FD6A /* ViewController.m */; };
+		B8C2295116B788B400F9FD6A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C2295016B788B400F9FD6A /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B8C2294616B7840000F9FD6A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B8C2294816B7840000F9FD6A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B8C2294916B7840000F9FD6A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B8C2295016B788B400F9FD6A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8C2295116B788B400F9FD6A /* Social.framework in Frameworks */,
 				B8C2292E16B7840000F9FD6A /* UIKit.framework in Frameworks */,
 				B8C2293016B7840000F9FD6A /* Foundation.framework in Frameworks */,
 				B8C2293216B7840000F9FD6A /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +59,7 @@
 		B8C2291E16B783FF00F9FD6A = {
 			isa = PBXGroup;
 			children = (
+				B8C2295016B788B400F9FD6A /* Social.framework */,
 				B8C2293316B7840000F9FD6A /* Notoppoid */,
 				B8C2292C16B7840000F9FD6A /* Frameworks */,
 				B8C2292A16B783FF00F9FD6A /* Products */,
