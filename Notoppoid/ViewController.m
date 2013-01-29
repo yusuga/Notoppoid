@@ -34,15 +34,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
 - (IBAction)notoru:(id)sender
 {
 
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [vc setInitialText:[NSString stringWithFormat:@"%@も%@から%@は%@たる%@の%@で%@中 #のとっぽいど", self.whenTextField.text, self.fastSlowSegmentedControl.selectedSegmentIndex ? @"早く" : @"遅く", self.areaTextField.text, self.whereAreaTextField.text, self.detailAreaTextField.text, self.exactAreaTextFiled.text, self.doingTextField.text]];
+        [vc setInitialText:[NSString stringWithFormat:@"%@も%@から%@は%@たる%@の%@で%@中 #のとっぽいど",
+                            self.whenTextField.text.length ? self.whenTextField.text : self.whenTextField.placeholder,
+                            self.fastSlowSegmentedControl.selectedSegmentIndex ? @"遅く" : @"早く",
+                            self.areaTextField.text.length ? self.areaTextField.text : self.areaTextField.placeholder,
+                            self.whereAreaTextField.text.length ? self.whereAreaTextField.text : self.whereAreaTextField.placeholder,
+                            self.detailAreaTextField.text.length ? self.detailAreaTextField.text : self.detailAreaTextField.placeholder,
+                            self.exactAreaTextFiled.text.length ? self.exactAreaTextFiled.text : self.exactAreaTextFiled.placeholder,
+                            self.doingTextField.text.length ? self.doingTextField.text : self.doingTextField.placeholder]];
         [self presentViewController:vc animated:YES completion:nil];
     }
 }
 
+- (IBAction)deleteAllText
+{
+    NSArray *arr = @[self.whenTextField, self.areaTextField, self.whereAreaTextField, self.detailAreaTextField, self.exactAreaTextFiled, self.doingTextField];
+    for (UITextField *tf in arr) {
+        tf.text = nil;
+    }
+}
 
 @end
