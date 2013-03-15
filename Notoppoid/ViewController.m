@@ -63,7 +63,7 @@ static NSString *const kHashTag = @"#のとっぽいど";
             self.whereAreaTextField.text.length ? self.whereAreaTextField.text : self.whereAreaTextField.placeholder,
             self.detailAreaTextField.text.length ? self.detailAreaTextField.text : self.detailAreaTextField.placeholder,
             self.exactAreaTextFiled.text.length ? self.exactAreaTextFiled.text : self.exactAreaTextFiled.placeholder,
-            self.doingTextField.text.length ? self.doingTextField.text : self.doingTextField.placeholder];
+             self.doingTextField.text.length ? self.doingTextField.text : self.doingTextField.placeholder];
 }
 
 - (IBAction)notoru:(id)sender
@@ -92,6 +92,7 @@ static NSString *const kHashTag = @"#のとっぽいど";
     for (int i = 0; i < str.length; i++) {
         [mStr appendFormat:@"%@\n", [str substringWithRange:NSMakeRange(i, 1)]];
     }
+    [mStr replaceOccurrencesOfString:@"ー" withString:@" |" options:0 range:NSMakeRange(0, mStr.length)];
     return mStr;
 }
 
